@@ -1,9 +1,9 @@
 
 import React from "react";
 import './../styles/App.css';
-import Tabs from './Tab';
-
+import Tabs from "./Tab";
 const App = () => {
+
   const tabs1=[
     {
       title:'Tab 1',
@@ -38,6 +38,7 @@ const App = () => {
         <Tabs info={tabs1} id='tabs1'/>
         <Tabs info={tabs2} id='tabs2'/>
     </div>
+
   )
 }
 
