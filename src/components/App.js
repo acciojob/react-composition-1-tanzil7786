@@ -1,42 +1,21 @@
 
-import React from "react";
+import React, {useState} from "react";
 import './../styles/App.css';
-import Tabs from "./Tab";
-const App = () => {
 
-  const tabs1=[
-    {
-      title:'Tab 1',
-      content:'Content for Tab 1'
-    },
-    {
-      title:'Tab 2',
-      content:'Content for Tab 2'
-    },
-    {
-      title:'Tab 3',
-      content:'Content for Tab 3'
-    }
-  ]
-  const tabs2=[
-    {
-      title:'Tab A',
-      content:'Content for Tab A'
-    },
-    {
-      title:'Tab B',
-      content:'Content for Tab B'
-    },
-    {
-      title:'Tab C',
-      content:'Content for Tab C'
-    }
-  ]
+const App = () => {
+  const [count , setCount]  = useState("tab 1");
+  function change(event){
+    setCount(event.target.textContent);
+  }
   return (
     <div>
         {/* Do not remove the main div */}
-        <Tabs info={tabs1} id='tabs1'/>
-        <Tabs info={tabs2} id='tabs2'/>
+        <ul>
+          <li onClick={change}>Tab 1</li>
+          <li onClick={change}>Tab 2</li>
+          <li onClick={change}>Tab 3</li>
+          <p>This is the content for {count}</p>
+        </ul>
     </div>
 
   )
