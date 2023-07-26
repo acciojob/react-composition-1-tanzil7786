@@ -10,12 +10,10 @@ const App = () => {
   return (
     <div>
         {/* Do not remove the main div */}
-        <ul>
           <li onClick={change}>Tab 1</li>
           <li onClick={change}>Tab 2</li>
           <li onClick={change}>Tab 3</li>
-          <p>This is the content for {count}</p>
-        </ul>
+          <li>This is the content for {count}.</li>
     </div>
 
   )
