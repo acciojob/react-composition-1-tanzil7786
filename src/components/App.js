@@ -13,7 +13,7 @@ const App = () => {
           <li onClick={change}>Tab 1</li>
           <li onClick={change}>Tab 2</li>
           <li onClick={change}>Tab 3</li>
-          <li>This is the content for {count}.</li>
+          <p>This is the content for {count}.</p>
     </div>
 
   )
